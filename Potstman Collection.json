@@ -1,0 +1,244 @@
+{
+	"info": {
+		"_postman_id": "c583d03a-b756-4d09-b7e3-3e45af2bf7b7",
+		"name": "Produk_API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29632337"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"alaufa@example.com\",\r\n  \"password\": \"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/tesRumahweb/Codeigniter/index.php/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tesRumahweb",
+						"Codeigniter",
+						"index.php",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET All Produk",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFsYXVmYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MjcyNTMxOCwiZXhwIjoxNzUyNzI4OTE4fQ.ibkqMusAFc9EdS7DizLsDfaXyDD5_XkvTyP4dciky9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tesRumahweb/Codeigniter/index.php/produk",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tesRumahweb",
+						"Codeigniter",
+						"index.php",
+						"produk"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ADD Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFsYXVmYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MjcyNTMxOCwiZXhwIjoxNzUyNzI4OTE4fQ.ibkqMusAFc9EdS7DizLsDfaXyDD5_XkvTyP4dciky9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"hp\",\r\n  \"price\": \"1000000\",\r\n  \"category_id\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tesRumahweb/Codeigniter/index.php/user/store",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tesRumahweb",
+						"Codeigniter",
+						"index.php",
+						"user",
+						"store"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UPDATE Produk",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFsYXVmYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MjcyNTMxOCwiZXhwIjoxNzUyNzI4OTE4fQ.ibkqMusAFc9EdS7DizLsDfaXyDD5_XkvTyP4dciky9Y",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"update hp\",\r\n  \"price\": \"1000000\",\r\n  \"category_id\": \"2\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/tesRumahweb/Codeigniter/index.php/user/update/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tesRumahweb",
+						"Codeigniter",
+						"index.php",
+						"user",
+						"update",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpZCI6IjIiLCJlbWFpbCI6ImFsYXVmYUBleGFtcGxlLmNvbSIsImlhdCI6MTc1MjcyNzgwNywiZXhwIjoxNzUyNzMxNDA3fQ.BqAQ23KFV7On-WAx0CrSsODnS87nynJ7WkjtWEj6Geg",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/tesRumahweb/Codeigniter/index.php/user/delete/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"tesRumahweb",
+						"Codeigniter",
+						"index.php",
+						"user",
+						"delete",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
